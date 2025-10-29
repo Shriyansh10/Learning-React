@@ -54,11 +54,13 @@ function App() {
             <div className="mb-4">{<NotesForm />}</div>
             <div className="flex flex-wrap gap-y-3">
               {notes &&
-                notes.map((note) => (
-                  <div className="w-full" key={note.id}>
+                notes.map((note, index) => {
+                  console.log(index);
+                  return <div className="w-full" key={note.id}>
                     <NotesItem note={note} />
                   </div>
-                ))}
+                }
+                )}
             </div>
           </div>
         </div>
