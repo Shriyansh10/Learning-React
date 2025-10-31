@@ -45,3 +45,4 @@ if(localStorage.getItem('notes') === null) console.log(true);
 else {
   console.log(JSON.parse(localStorage.getItem('notes')))
 }
+
