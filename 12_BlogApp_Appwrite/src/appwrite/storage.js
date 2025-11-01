@@ -59,6 +59,17 @@ class StorageService {
     }
   }
 
+  previewFile(fileId) {
+    try {
+      return this.bucket.getFilePreview({
+        bucketId: conf.appwriteBucketID,
+        fileId: fileId,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async deleteFile(fileId) {
     try {
       return await this.bucket.deleteFile({
