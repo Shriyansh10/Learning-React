@@ -1,5 +1,5 @@
 import React from 'react'
-import { tableDBService, storageService } from '../appwrite'
+import { storageService } from '../appwrite'
 import {Link} from 'react-router'
 
 function PostCard({$id, title, featuredImage}) {
