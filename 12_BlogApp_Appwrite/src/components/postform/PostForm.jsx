@@ -67,6 +67,8 @@ function PostForm({ post }) {
         setValue("rowId", slugTransform(value.title, { shouldValidate: true }));
       }
     });
+
+    return (() => subscription.unsubscribe())
   }, [watch, slugTransform, setValue]);
 
   return (
